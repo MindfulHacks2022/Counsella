@@ -7,21 +7,21 @@
     <title>Document</title>
     <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
-    
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
   </head>
   <body>
     <a-scene>
       <a-assets>
-      <a-asset-item id="tree" src="./therapist.glb"></a-asset-item>
+        <a-asset-item id="mech" src="./mech_drone/scene.gltf"></a-asset-item>
       </a-assets>
-      <a-marker preset="hiro">
-        <a-entity gltf-model="#tree"></a-entity>
-        <!-- <a-entity obj-model="obj: url(./untitled.obj); "> </a-entity> -->
-        <a-entity
-          gltf-model="url(./therapist.glb)"
-        ></a-entity>
+      <a-marker preset="kanji">
+        <a-entity obj-model="obj: url(./therapist.obj); "> </a-entity>
         <!-- <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere> -->
-    </a-marker>
+      </a-marker>
+      <a-marker preset="hiro">
+        <a-entity gltf-model="#mech"></a-entity>
+        <a-sphere position="0 1.25 -5" radius="0.5" color="#EF2D5E"></a-sphere>
+      </a-marker>
       <a-entity camera> </a-entity>
     </a-scene>
   </body>
