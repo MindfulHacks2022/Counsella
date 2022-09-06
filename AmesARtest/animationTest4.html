@@ -1,7 +1,7 @@
 <html class="a-fullscreen">
   <head>
     <meta charset="UTF-8" />
-       <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <meta
       aframe-injected=""
       name="viewport"
@@ -9,7 +9,6 @@
     />
     <meta aframe-injected="" name="mobile-web-app-capable" content="yes" />
     <meta aframe-injected="" name="theme-color" content="black" />
-    <!-- <script src="../assets/js/aframe.min.js"></script> -->
     <style type="text/css" data-href="src\style\aframe.css">
       html.a-fullscreen {
         bottom: 0;
@@ -474,101 +473,49 @@
         }
       }
     </style>
-       <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
-    <!-- <script src="../assets/js/aframe-extras.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
   </head>
   <body>
     <a-scene
-      background="color: #D3D3D3"
-      fog="type: exponential; density: 0.12; color: #696969;"
-      animation="property: fog.color; dur: 7000;
-                       from: #696969; to: #fff;
-                       loop: true; dir: alternate"
-      inspector=""
-      keyboard-shortcuts=""
-      screenshot=""
-      vr-mode-ui=""
-      device-orientation-permission-ui=""
+
     >
       <a-assets>
-        <a-asset-item id="drone" src="./mech_drone/scene.gltf">
-        </a-asset-item>
+        <a-asset-item
+          id="drone"
+          src="./therapist_animation.gltf"
+        ></a-asset-item>
+        <a-asset-item
+          id="nodding"
+          src="./therapist_animation.gltf"
+        ></a-asset-item>
       </a-assets>
 
-      <a-entity
-        position="0 2 -9"
-        gltf-model="#drone"
-        scale="6 6 6"
-        animation="property: rotation; dur: 10000;
-                           to: 0 360 0; loop: true"
-      >
-      </a-entity>
-
-      <a-entity
-        position="8 2 -9"
-        gltf-model="#drone"
-        scale="6 6 6"
-        animation-mixer=""
-      >
-      </a-entity>
+      <a-entity camera> </a-entity>
 
       <a-entity
         position="-6 -2 -9"
         gltf-model="#drone"
-        scale="6 6 6"
+        scale="0.5 0.5 0.5"
         animation-mixer=""
         animation="property: rotation; dur: 10000;
                            to: 0 360 0; loop: true"
       >
       </a-entity>
 
-      <a-light
-        type="point"
-        intensity="0"
-        position="-2 2 2"
-        animation="property: light.intensity;
-                          dur: 7000; from: 0; to: 1.5;
-                          dir: alternate; loop: true"
-        light=""
-      >
-      </a-light>
 
-      <a-entity position="-3 2 1" rotation="20 -25 0">
-        <a-camera
-          camera=""
-          position=""
-          rotation=""
-          look-controls=""
-          wasd-controls=""
+      <a-marker preset="hiro">
+        <a-entity
+          position="0 2 -9"
+          gltf-model="#nodding"
+          scale="1 1 1"
+          animation-mixer=""
+          animation="property: rotation; dur: 10000;
+                           to: 0 360 0; loop: true"
         >
-        </a-camera>
-      </a-entity>
+        </a-entity>
+      </a-marker>
 
-      <canvas
-        class="a-canvas a-grab-cursor"
-        data-aframe-canvas="true"
-        width="1264"
-        height="961"
-        style=""
-      ></canvas>
-      <div class="a-loader-title" style="display: none"></div>
-      <div class="a-enter-vr" aframe-injected="">
-        <button
-          class="a-enter-vr-button"
-          title="Enter VR mode with a headset or fullscreen mode on a desktop. Visit https://webvr.rocks or https://webvr.info for more information."
-          aframe-injected=""
-        ></button>
-      </div>
-      <div class="a-enter-ar a-hidden" aframe-injected="">
-        <button
-          class="a-enter-ar-button"
-          title="Enter AR mode with a headset or handheld device. Visit https://webvr.rocks or https://webvr.info for more information."
-          aframe-injected=""
-        ></button>
-      </div>
-      <div class="a-orientation-modal a-hidden" aframe-injected="">
-        <button aframe-injected="">Exit VR</button>
-      </div></a-scene
+</a-scene
     >
   </body>
 </html>

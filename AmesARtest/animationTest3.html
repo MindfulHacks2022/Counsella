@@ -491,14 +491,15 @@
       device-orientation-permission-ui=""
     >
       <a-assets>
-        <a-asset-item id="drone" src="./mech_drone/scene.gltf">
+        <a-asset-item id="drone" src="./therapist_animation.gltf">
         </a-asset-item>
       </a-assets>
 
       <a-entity
         position="0 2 -9"
         gltf-model="#drone"
-        scale="6 6 6"
+        scale="1 1 1"
+        animation-mixer=""
         animation="property: rotation; dur: 10000;
                            to: 0 360 0; loop: true"
       >
@@ -507,7 +508,7 @@
       <a-entity
         position="8 2 -9"
         gltf-model="#drone"
-        scale="6 6 6"
+        scale="2 2 2"
         animation-mixer=""
       >
       </a-entity>
@@ -515,7 +516,7 @@
       <a-entity
         position="-6 -2 -9"
         gltf-model="#drone"
-        scale="6 6 6"
+        scale="0.5 0.5 0.5"
         animation-mixer=""
         animation="property: rotation; dur: 10000;
                            to: 0 360 0; loop: true"
