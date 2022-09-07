@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./Counsella.png" type="image/png" />
+
     <title>Counsella</title>
 
     <!-- Patrick hand font -->
@@ -22,24 +23,29 @@
     />
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
     <link rel="stylesheet" href="mainStyles.css" />
   </head>
   <body>
     <div id="main-container" class="center">
-      <img id="logo" src="./Counsella.png" alt="" />
-      <h1>Welcome to Counsella</h1>
-      <p>
-        Counsella is a platform where you can vent to a virtual counsellor in AR
-        between your therapy sessions
-      </p>
+      <h1>Counsella AR Marker</h1>
+      <img class="marker" src="hiro.jpg" alt="" />
+      <p>Use this marker to view your AR counsellor</p>
 
       <div id="options">
         <div class="button-container">
           <button
-            onclick="window.location = 'webView.html';"
+            onclick="window.location = 'index.html';"
             class="mdc-button mdc-button--raised custom-contained-button"
           >
-            <span class="mdc-button__label">Web View</span>
+            <i class="material-icons mdc-button__icon" aria-hidden="true"
+              >home</i
+            >
+            <span class="mdc-button__label">Back home</span>
           </button>
         </div>
 
@@ -48,6 +54,9 @@
             onclick="window.location = 'mobileView.html';"
             class="mdc-button mdc-button--raised custom-contained-button"
           >
+            <i class="material-icons mdc-button__icon" aria-hidden="true"
+              >smartphone</i
+            >
             <span class="mdc-button__label">Mobile View</span>
           </button>
         </div>

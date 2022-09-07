@@ -22,6 +22,8 @@
     />
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     <link rel="stylesheet" href="mainStyles.css" />
   </head>
   <body>
@@ -33,12 +35,15 @@
         between your therapy sessions
       </p>
 
+      
+
       <div id="options">
         <div class="button-container">
           <button
             onclick="window.location = 'webView.html';"
             class="mdc-button mdc-button--raised custom-contained-button"
           >
+          <i class="material-icons mdc-button__icon" aria-hidden="true">desktop_windows</i>
             <span class="mdc-button__label">Web View</span>
           </button>
         </div>
@@ -48,7 +53,8 @@
             onclick="window.location = 'mobileView.html';"
             class="mdc-button mdc-button--raised custom-contained-button"
           >
-            <span class="mdc-button__label">Mobile View</span>
+          <i class="material-icons mdc-button__icon" aria-hidden="true">smartphone</i>
+          <span class="mdc-button__label">Mobile View</span>
           </button>
         </div>
       </div>
