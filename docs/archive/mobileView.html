@@ -36,7 +36,13 @@
 
       <iframe
         id="nodding-model"
+        hidden="true"
         src="arViewerNodding.html"
+        frameborder="0"
+      ></iframe>
+      <iframe
+        id="static-model"
+        src="arViewerStatic.html"
         frameborder="0"
       ></iframe>
 
@@ -79,5 +85,32 @@
       </div>
     </div>
 
+    <script>
+        var noddingModel = document.getElementById("nodding-model");
+        var staticModel = document.getElementById("static-model");
+
+        isNodding = false;
+
+        function showNoddingModel() {
+            noddingModel.hidden = false;
+            staticModel.hidden = true;
+        }
+
+        function showStaticModel() {
+            noddingModel.hidden = true;
+            staticModel.hidden = false;
+        }
+
+        function toggleModel() {
+            if (isNodding) {
+                showStaticModel();
+            } else {
+                showNoddingModel();
+            }
+            isNodding = !isNodding;
+        }
+        
+    </script>
+        
   </body>
 </html>
