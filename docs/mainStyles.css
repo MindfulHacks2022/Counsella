@@ -1,0 +1,62 @@
+body {
+    background-color: #f7b9c8;
+    color: #000000;
+    margin: 0px;
+    padding: 0px;
+
+    font-family: 'Patrick Hand', cursive;
+    text-align: center;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+#logo {
+    max-height: 300px;
+    border-radius: 10%;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+#options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container {
+    margin: 10px;
+}
+
+@use "@material/button";
+
+.custom-text-button,
+.custom-contained-button {
+  --mdc-theme-primary: #FEDBD0;
+  --mdc-theme-on-primary: #442C2E;
+
+  @include button.ink-color(#84565E);
+
+  font-family: 'Patrick Hand', cursive;
+
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 576px ) {
+    #logo {
+        max-height: 200px;
+    }
+}
