@@ -34,9 +34,28 @@
     <div id="main-container" class="center">
       <h1>Counsella AR Viewer</h1>
 
-      <iframe src="arViewerNodding.html" frameborder="0"></iframe>
+      <iframe
+        id="nodding-model"
+        hidden="true"
+        src="arViewerNodding.html"
+        frameborder="0"
+      ></iframe>
+      <iframe
+        id="static-model"
+        src="arViewerStatic.html"
+        frameborder="0"
+      ></iframe>
 
       <p>Point at the QR code to see your virtual counsellor</p>
+
+      <div class="button-container">
+        <button
+          onclick="toggleModel()"
+          class="mdc-button mdc-button--raised custom-contained-button"
+        >
+          <span class="mdc-button__label">Toggle Nodding</span>
+        </button>
+      </div>
 
       <div id="options">
         <div class="button-container">
@@ -65,5 +84,33 @@
         </div>
       </div>
     </div>
+
+    <script>
+        var noddingModel = document.getElementById("nodding-model");
+        var staticModel = document.getElementById("static-model");
+
+        isNodding = false;
+
+        function showNoddingModel() {
+            noddingModel.hidden = false;
+            staticModel.hidden = true;
+        }
+
+        function showStaticModel() {
+            noddingModel.hidden = true;
+            staticModel.hidden = false;
+        }
+
+        function toggleModel() {
+            if (isNodding) {
+                showStaticModel();
+            } else {
+                showNoddingModel();
+            }
+            isNodding = !isNodding;
+        }
+        
+    </script>
+        
   </body>
 </html>
